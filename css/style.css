@@ -9694,13 +9694,159 @@ textarea.form-control {
     stroke-dasharray: 89, 200;
     stroke-dashoffset: -136px; } }
 
-@keyframes loader-dash {
+
+    
+/* Add this to your CSS */
+html {
+  scroll-behavior: smooth;
+}
+/* Add this to your CSS */
+.hero {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
   0% {
-    stroke-dasharray: 1, 200;
-    stroke-dashoffset: 0; }
+    background-position: 0% 50%;
+  }
   50% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -35px; }
+    background-position: 100% 50%;
+  }
   100% {
-    stroke-dasharray: 89, 200;
-    stroke-dashoffset: -136px; } }
+    background-position: 0% 50%;
+  }
+}
+
+
+
+/* Projects Section */
+.project-filters .btn-filter {
+  margin: 5px;
+  padding: 10px 20px;
+  border: 2px solid #ffbd39;
+  border-radius: 25px;
+  background-color: transparent;
+  color: #000;
+  transition: all 0.3s ease;
+}
+
+.project-filters .btn-filter.active,
+
+.project-filters .btn-filter:hover {
+  background-color: #ffbd39;
+  color: #fff;
+}
+.project-filters .btn-filter,
+.project-filters .btn-filter:hover {
+
+  color: #fff;
+}
+.project-grid .blog-entry {
+  margin-bottom: 30px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-grid .blog-entry:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.project-grid .zoom-effect {
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.project-grid .zoom-effect img {
+  transition: transform 0.3s ease;
+}
+
+.project-grid .zoom-effect:hover img {
+  transform: scale(1.1);
+}
+
+.project-grid .badge {
+  font-size: 14px;
+  padding: 5px 10px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Modal Styles */
+.modal-content {
+  border-radius: 10px;
+  border: none;
+}
+
+.modal-header {
+  background-color: #ffbd39;
+  color: #fff;
+  border-radius: 10px 10px 0 0;
+}
+
+.modal-body {
+  padding: 20px;
+}
+
+#typing-wrapper {
+  font-size: 24px;
+  font-weight: 600;
+  color: #ffbd39;
+  display: inline-block;
+}
+
+.cursor {
+  display: inline-block;
+  margin-left: 2px;
+  animation: blink 1s step-start infinite;
+  color: #ffbd39;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+
+
+.timeline-wrap {
+  position: relative;
+  padding-left: 60px;
+}
+.timeline-wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 32px;
+  width: 5px;
+  background-color: #007bff;
+}
+.timeline-dot {
+  position: relative;
+  width: 20px;
+}
+.timeline-content {
+  background: #fff8e6; /* Light warm yellow */
+}
+.text-muted {
+  color: #f5f2ec !important; /* golden yellow for dates */
+}
+
+.dot {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #007bff;
+  border: 5px solid #fff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.3);
+}
+.timeline-left {
+  min-width: 200px;
+}
+.timeline-entry {
+  align-items: flex-start;
+}
